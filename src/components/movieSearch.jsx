@@ -7,6 +7,19 @@ const MovieSearch = () => {
     setQuery(event.target.value)
   }
 
+    const searchMovies = async (e) => {
+  e.preventDefault();
+  const url = `https://api.themoviedb.org/3/search/movie?api_key=ff95d1ea8a4f9e4dc6c39e17d2ecc599&language=en-US&query=${encodeURIComponent(query)}&page=1`;
+
+  try {
+    const res = await fetch(url);
+    const data = await res.json(); 
+    console.log(data);
+    setMovies(data.results)
+  } catch (err) {
+    console.error(err);
+  }
+};
   return (
     <div>
       <form 
