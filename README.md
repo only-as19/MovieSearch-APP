@@ -1,12 +1,56 @@
-# React + Vite
+# Movie Search App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+The **Movie Search App** is a React application that allows users to search for movies and view relevant details like the movie title, release date, IMDB rating, and a brief overview. This app uses The Movie Database (TMDb) API to fetch real-time movie data and displays it in a user-friendly, responsive interface.
 
-Currently, two official plugins are available:
+## Features
+- **Search Functionality:** Search for movies by name.
+- **Movie Information:** Displays the movie's title, release date, IMDB rating, and overview.
+- **Responsive UI:** Adaptable for both mobile and desktop devices.
+- **Error Handling:** Shows a message when no movies are found or if the data is unavailable.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
 
-## Expanding the ESLint configuration
+1. Clone this repository to your local machine:
+    ```bash
+    git clone https://github.com/your-username/movie-search-app.git
+    ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. Navigate to the project directory:
+    ```bash
+    cd movie-search-app
+    ```
+
+3. Install the required dependencies:
+    ```bash
+    npm install
+    ```
+
+4. Run the application locally:
+    ```bash
+    npm start
+    ```
+
+5. Visit `http://localhost:3000` in your browser to see the app in action.
+
+## How it Works
+
+- **React Components:** The app consists of two main components:
+  1. **MovieCard**: Displays individual movie details such as poster, title, release date, rating, and overview.
+  2. **MovieSearch**: Handles the search functionality, allows users to input a query, fetches the movie data from TMDb, and displays the results.
+  
+- **Fetching Data:** Upon submitting a movie name, the app fetches data from the **TMDb API** using an asynchronous `fetch` request. The data is then displayed in the form of cards with movie details.
+
+## TMDb API Integration
+This app integrates with the **TMDb API** to fetch movie details. You can create a free account on [TMDb](https://www.themoviedb.org/) to get an API key and replace it in the source code.
+
+## Tech Stack
+- **React**: JavaScript library for building user interfaces.
+- **CSS/TailwindCSS**: For styling and creating a responsive layout.
+- **TMDb API**: To fetch real-time movie data.
+
+## Contributing
+If you'd like to contribute to this project, feel free to open a pull request or submit an issue.
+
+## License
+This project is open-source and available under the MIT License.
