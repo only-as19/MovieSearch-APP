@@ -44,6 +44,11 @@ const MovieSearch = () => {
                 >Search
             </button>
       </form>
+      <div className='mt-10'>
+        {movies.filter(movie=> movie.poster_path).map(movie=> (
+          <MovieCard movie={movie} key={movie.id} />
+        ))}
+      </div>
     </div>
   )
 }
