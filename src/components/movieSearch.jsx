@@ -1,9 +1,11 @@
 import React from 'react'
 import { useState } from 'react'
+import MovieCard from './movieCard'
 
 const MovieSearch = () => {
 
     const[query,setQuery] = useState("")
+    const[movies,setMovies] = useState([])
     const handleChange = (event)=>{
     setQuery(event.target.value)
   }
